@@ -7,7 +7,7 @@ import HeaderPost from "../ui/Post/HeaderPostAtom";
 
 //Estilos
 const MainContainer = styled.div`
-width: 684px;
+width: 100%;
 
 display: flex;
 flex-direction: column;
