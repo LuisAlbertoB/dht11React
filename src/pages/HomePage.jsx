@@ -1,44 +1,40 @@
-//Importar librerias
+// Importar librerías
 import React from "react";
 import styled from "styled-components";
+import PieChart from "../components/ui/PieChart";
 
-//Importar componentes
-import Header from "../components/page/HeaderMolecule";
-import PorfileSnippet from "../components/ui/PorfileSnipedAtom";
-import FeedColumnAtom from "../components/ui/FeedColumnAtom";
+import HumidityHighTable from "../components/ui/HumidityHighTable";
+import HumidityLowTable from "../components/ui/HumidityLowTable";
+import TemperatureHighTable from "../components/ui/TemperatureHighTable";
+import TemperatureLowTable from "../components/ui/TemperatureLowTable";
+import SensorDataTable from "../components/ui/SensorDataTable";
 
-//Estilos
+// Estilos
 const MainContainer = styled.div`
-width: 98%;
-height: auto;
-
-display: flex;
-align-items: center;
-flex-direction: column;
+  width: 98%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 `;
-
-const MainFrame = styled.div`
-width: 100%;
-height: auto;
-
-display: flex;
-
-padding-top: 1%;
-`;
-
 
 function Home() {
-    return (
-        <MainContainer>
-            <Header />
-
-            <MainFrame>
-                {/* <PorfileSnippet imgBannerSource="/asets/banner.jpeg" /> */}
-                <PorfileSnippet />
-                <FeedColumnAtom />
-            </MainFrame>
-        </MainContainer>
-     );
+  return (
+    <MainContainer>
+      <h1>Probabilidad de que el pan este descompuesto</h1>
+      <PieChart />
+      <h1>Ultimos registros de humedad alta</h1>
+      <HumidityHighTable />
+      <h1>Ultimos registros de humedad baja</h1>
+      <HumidityLowTable />
+      <h1>Ultimos registros de temperatura alta</h1>
+      <TemperatureHighTable />
+      <h1>Ultimos registros de temperatura baja</h1>
+      <TemperatureLowTable />
+      <h1>Sensor data</h1>
+      <SensorDataTable />
+    </MainContainer>
+  );
 }
 
 export default Home;
